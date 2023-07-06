@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import "./CSS/App.css";
+import Navbar from "./Components/Navbar";
 
 function App() {
-  const [message, setMessage] = useState("");
+  // const [message, setMessage] = useState("");
 
-  useEffect(() => {
-    fetch("http://localhost:8000/message")
-      .then((res) => res.json())
-      .then((data) => setMessage(data.message));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:8000/message")
+  //     .then((res) => res.json())
+  //     .then((data) => setMessage(data.message));
+  // }, []);
 
   return (
     <div className="App">
-      <h1>{message}</h1>
+      <Navbar />
+      <h2>KC Prestine</h2>
     </div>
   );
 }
